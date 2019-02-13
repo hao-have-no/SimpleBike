@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="demo.edu23.mapper.BikeMapper">
+    <insert id="save" parameterType="demo.edu23.pojo.Bike">
+		INSERT INTO tbikes (longitude, latitude, status) VALUES (#{longitude}, #{latitude}, #{status})
+	</insert>
+    <select id="findAll" resultType="demo.edu23.pojo.Bike">
+		SELECT * FROM tbikes
+	</select>
+
+</mapper>
